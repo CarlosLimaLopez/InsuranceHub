@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekiq"
 
   namespace :api do
-    resources :insurance_policies, only: [:index, :show, :create]
-    post 'policies/:policy_id/purchase', to: 'purchases#create'
+    resources :insurance_policies, only: [ :index, :show, :create ]
+    post "policies/:policy_id/purchase", to: 'purchases#create'
   end
 end

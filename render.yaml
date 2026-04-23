@@ -39,8 +39,8 @@ services:
           name: redis
           property: connectionString
 
-  - type: pserv
-    name: insurance-hub-db
+databases:
+  - name: insurance-hub-db
     databaseName: insurance_hub
-    databaseUser: insurance_hub
+    user: insurance_hub
     plan: free
